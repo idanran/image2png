@@ -2,6 +2,8 @@
 
 [![npm](https://img.shields.io/npm/v/image2png?style=flat-square)](https://www.npmjs.com/package/image2png)
 
+一个文件格式转换工具，支持WebP、JPEG转换为PNG。
+
 ## API
 ```ts
 function conver(input: string, output: string): Promise<void>
@@ -14,14 +16,11 @@ input 和 output 为文件地址。
 ```
 yarn build
 ```
-然后把编码器 (bimg-cli.exe) 放入 lib 目录。
+然后把编码器 (image-cli.exe) 放入 lib 目录。
 
-## Build `bimg-cli.exe`
-
-https://github.com/h2non/bimg/issues/435#issuecomment-1336550063
+## Build `image-cli.exe`
 
 ```
-cd go
-go build -ldflags '-w -s'
-upx bimg-cli.exe
+cd rs
+cargo build -r
 ```
